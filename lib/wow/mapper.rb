@@ -4,9 +4,10 @@ class ActionDispatch::Routing::Mapper
   # end
 
   def draw_routes
-    routes = `git ls-files -z config/routes`.split("\x0")
+    # routes = `git ls-files -z config/routes`.split("\x0")
+    routes = `ls config/routes`.split("\n")
     routes.each do |route|
-      instance_eval(File.read(Rails.root.join(route)))
+      instance_eval(File.read(Rails.root.join("config/routes/#{route}")))
     end
   end
 end
