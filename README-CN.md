@@ -5,7 +5,7 @@
 添加下面这行到 Gemfile:
 
 ```ruby
-gem 'wow-route'
+gem 'wow-route', :git => 'https://github.com/winterbang/wow-route.git'
 ```
 
 然后执行下面的命令
@@ -24,8 +24,8 @@ $ gem install wow-route
 ```bash
 $ rails g wow:route admin
 ```
-如果执行`rails g wow:route api`，则生成`api.rb`，
-然后可以像编辑`config/routes.rb`文件一样在`admin.rb`中设置路由。
+如果执行`rails g wow:route api`则生成`api.rb`，
+然后可以像编辑`config/routes.rb`文件一样在`admin.rb`中使用Rails 路由的语法糖来设置。
 例如：
 ```ruby
 namespace :admin do

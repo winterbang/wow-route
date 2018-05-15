@@ -7,7 +7,7 @@ A gem for rails which u can split routes.rb into smaller parts.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'wow-route'
+gem 'wow-route', :git => 'https://github.com/winterbang/wow-route.git'
 ```
 
 And then execute:
